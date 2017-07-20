@@ -19,15 +19,15 @@ Element to obtain a list of photosets from the Flickr API and to present this da
     <style>
       :host {
         @apply(--layout-vertical);
-        @apply(--layout-flex);
-        padding-bottom: 1%;
+        display: block;
       }
 
       iron-scroll-threshold {
         @apply(--layout-horizontal);
         @apply(--layout-justified);
         @apply(--layout-wrap);
-        padding: 1%;
+        @apply(--layout-flex);
+        padding-bottom: 1%;
       }
 
       .photoset {
