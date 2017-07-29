@@ -27,11 +27,10 @@ Element to obtain a list of photosets from the Flickr API and to present this da
         @apply(--layout-justified);
         @apply(--layout-wrap);
         @apply(--layout-flex);
-        padding-bottom: 1%;
       }
 
       .photoset {
-        margin-top: 1%;
+        margin-bottom: 1%;
       }
 
       :host:not([narrow]) .photoset {
@@ -40,6 +39,18 @@ Element to obtain a list of photosets from the Flickr API and to present this da
 
       :host[narrow] .photoset {
         width: 100%;
+      }
+
+      @supports (-ms-ime-align:auto) {
+        .photoset {
+          margin-bottom: 1em;
+        }
+      }
+
+      @-moz-document url-prefix() {
+        .photoset {
+          margin-bottom: 1em;
+        }
       }
 
       .photoset-title {
@@ -52,7 +63,7 @@ Element to obtain a list of photosets from the Flickr API and to present this da
         cursor: pointer;
       }
 
-      xsystems-youtube-search, array-selector {
+      xsystems-flickr-photosets, xsystems-flickr-photo, array-selector {
         display: none;
       }
     </style>

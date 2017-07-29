@@ -20,7 +20,6 @@ Element to obtain photoset data from the Flickr API and to present this data.
       :host {
         @apply(--layout-vertical);
         display: block;
-        padding-bottom: 1%;
       }
 
       iron-scroll-threshold {
@@ -31,7 +30,7 @@ Element to obtain photoset data from the Flickr API and to present this data.
       }
 
       .photoset {
-        margin-top: 1%;
+        margin-bottom: 1%;
       }
 
       :host:not([narrow]) .photoset {
@@ -40,6 +39,18 @@ Element to obtain photoset data from the Flickr API and to present this data.
 
       :host[narrow] .photoset {
         width: 100%;
+      }
+
+      @supports (-ms-ime-align:auto) {
+        .photoset {
+          margin-bottom: 1em;
+        }
+      }
+
+      @-moz-document url-prefix() {
+        .photoset {
+          margin-bottom: 1em;
+        }
       }
 
       .photoset-title {
